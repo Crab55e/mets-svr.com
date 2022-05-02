@@ -1,4 +1,4 @@
-# mets-svr.com---source
+# mets-svr.com - source
 ## https://mets-svr.com/
 ---
 ### 古参勢で天才の偉い人かにさん等(自画自賛)によってつくられたwebサイトのソース！
