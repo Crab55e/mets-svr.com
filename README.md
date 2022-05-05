@@ -1,14 +1,2 @@
-# mets-svr.com - source
-## https://mets-svr.com/
-## オープンソースの精神を大事にしましょう！
----
-
-### 古参勢で天才の偉い人かにさん等(自画自賛)によってつくられたwebサイトのソース！
-### 基本的にPull requestsで更新のお願いを､､してください
----
-
-ちなみにここのソースを変更してもwebには反映されない
-上記の通りに変更した内容を教えてくれたら僕がサイトに送信する感じ
-
-
-cr by cr
+# mets-svr.com
+## mets-svr.com/discord-link
