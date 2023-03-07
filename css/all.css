@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Yomogi&display=swap');
+body {
+    font-family: Yomogi, 'Dancing Script', cursive;
+    color: #3e332d;
+}
+
+::selection {
+    background-color: #000;
+    color: #fff
+}
+
+a {
+    background: linear-gradient(currentColor 0 0) var(--p, 0) 100%/var(--d, 0) 3% no-repeat;
+    transition: .4s, background-position .1s .4s
+}
+
+a:hover {
+    --d: 100%;
+    --p: 100%
+}

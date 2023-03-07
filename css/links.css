@@ -1,0 +1,34 @@
+.links-panel {
+    background-color: #fffc;
+    position: absolute;
+    text-align: center;
+    margin-top: 11.25vh;
+    left: 61.25vh;
+    width: 75vh;
+    height: 75vh;
+    filter: drop-shadow(16px 16px .5px #0008);
+    text-shadow: #3e332d 0px 0px 4px;
+}
+
+.links-panel .title {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.links-panel .description {
+    font-size: 1.25rem;
+}
+
+.links-panel ul li {
+    margin: 7.5vh;
+    font-size: 1.5rem;
+}
+
+.links-panel ul li a:hover {
+    color: #68422e;
+    text-shadow: #68422e 0px 0px 4px;
+}
+
+.icon {
+    filter: drop-shadow(#4a342888 0px 0px 4px);
+}

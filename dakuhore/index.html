@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>| 濁点さんが惚れた相手について-old</title>
+    <meta name="description" content="フッフッフ...">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+</head>
+<style>
+    @charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+html {
+    font-size: 100%;
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+}
+
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #000000aa;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    filter: drop-shadow(2px 1px #555);
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(255, 255, 255);
+    background-color: #444c;
+    border: 1px #000 solid;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.title {
+    font-size: 50px;
+}
+
+
+/* 大きな背景画像 */
+
+.big-bg {
+    background-color: rgb(132, 173, 180);
+    background-size: cover;
+    background-position: center top;
+}
+
+
+/* 見出し */
+
+.page-title {
+    font-size: 4.5rem;
+    font-family: 'Philosopher', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px rgba(75, 75, 75, 0.377) solid;
+    font-family: 'Philosopher', serif;
+    font-weight: normal;
+}
+
+
+/* ボタン */
+
+.button {
+    font-size: 1.375rem;
+    background: rgba(75, 75, 75, 0.377);
+    color: #fff;
+    border-radius: 5px;
+    padding: 18px 32px;
+    transition: 1s;
+}
+
+.button:hover {
+    background: #fff;
+    color: rgba(75, 75, 75, 0.377);
+}
+
+div {
+    padding-top: 10px;
+    font-family: 'Philosopher', serif;
+}
+
+.link-title {
+    font-size: 2rem;
+    color: rgb(103, 255, 222);
+    padding: 5px 5px;
+    transition: 1s;
+}
+
+.link-title:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+/* iframe */
+
+iframe {
+    width: 100%;
+}
+
+details {
+    transition: 0.25s;
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+summary {
+    transition: 0.25s;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* HEADER
+------------------------------- */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 210px;
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 36px;
+}
+
+.main-nav a {
+    color: rgb(49, 49, 49);
+    transition: 1s;
+}
+
+.main-nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+/* HOME
+------------------------------- */
+
+#home {
+    background-image: url(https://mets-svr.com/dakuhore/main-bg.png);
+    min-height: 100vh;
+}
+
+#home .page-title {
+    text-transform: none;
+}
+
+.home-content {
+    text-align: center;
+    margin-top: 17%;
+}
+
+.home-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 42px;
+}
+
+#stalker {
+    pointer-events: none;
+    position: fixed;
+    top: -130px;
+    left: -20px;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    transform: translate(0, 0);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out;
+    z-index: 999;
+}
+
+.hov_ {
+    transition: transform 2s;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+    background-color: #000;
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0)
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0.2;
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+
+/* モバイル版
+------------------------------- */
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* HEADER */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 0 20px;
+    }
+    /* HOME */
+    .home-content {
+        margin-top: 20%;
+    }
+}
+</style>
+<body>
+    <div id="home" class="big-bg">
+        <header class="page-header wrapper">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="">運営</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="home-content wrapper">
+            <div class="page-title">濁点さんが惚れた相手一覧</div>
+            <div class="sub-title">極秘ページ！</div>
+            <div style="font-size: 2rem;">1人目 : カルロスさん - 夫
+                <p>忘れた、けど噂では、OPだから惚れた</p>
+                <p style="border-bottom: 2px rgba(75, 75, 75, 0.377) solid;">本サーバーで知り合ったユーザー(OP)</p>
+            </div>
+            <div style="font-size: 2rem;">2人目 : 彼氏 - 彼氏
+                <p>ガチ告白で惚れた(?)</p>
+                <p>リアルで知り合った同じ学校の生徒(多分)</p>
+                <div style="border-bottom: 2px rgba(75, 75, 75, 0.377) solid;">追加情報 : この間別れた
+                    <p>2022/4/16</p>
+                </div>
+            </div>
+            <div style="font-size: 2rem;">3人目 : かわさん - 推し
+                <p>忘れた</p>
+                <p style="border-bottom: 2px rgba(75, 75, 75, 0.377) solid;">本サーバーで知り合ったユーザー(幹部、多分)</p>
+            </div>
+            <div style="font-size: 2rem;">4人(?)目 : MEE6 - 飽きた
+                <p>ある会話の中で、自動メッセージを送信するタイミングで惚れた</p>
+                <p style="border-bottom: 2px rgba(75, 75, 75, 0.377) solid;">本サーバーに導入されているBOT</p>
+            </div>
+            <div style="font-size: 2rem;">5人目 : 世界史の先生 - 推し
+                <p>優しい</p>
+                <p style="border-bottom: 2px rgba(75, 75, 75, 0.377) solid;">リアルの学校の先生</p>
+            </div>
+            <!--=========================================マウスストーカー========================================-->
+            <div id="stalker">
+                <div class="spinner"></div>
+            </div>
+            <script type="text/javascript">
+                const stalker = document.getElementById('stalker');
+                document.addEventListener('mousemove', function(e) {
+                    stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+                });
+            </script>
+</body>
+
+</html>
